@@ -7,3 +7,5 @@ The Multipurpose Interface Board (MIB238 board) is a redesign of the Micro Innov
 The file mib238_v4_routed_2020-11-06.zip contains the Gerber files required for PCB fabrication. This version increases the width of power and ground lines to 16 mil and corrects the capacitor value for the crystal to 22 pF.
 
 The file Multipurpose Interface Board 238.pdf is the documentation for the MIB238. It contains information on using the MIB238 with your ADAM computer, serial and parallel cable construction, Z80 code examples and details on PCB fabrication and Bill of Materials.
+
+The file mib238_v5_routed_2021-01-16.zip contains new Gerber files for the latest version of the MIB238.  The C11 capacitor has been removed and a larger ground plane connection was added.  NOTE: This design has not been tested.  Use at your own risk.
