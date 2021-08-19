@@ -8,4 +8,6 @@ The file mib238_v4_routed_2020-11-06.zip contains the Gerber files required for 
 
 The file Multipurpose Interface Board 238.pdf is the documentation for the MIB238. It contains information on using the MIB238 with your ADAM computer, serial and parallel cable construction, Z80 code examples and details on PCB fabrication and Bill of Materials.
 
-The file mib238_v5_routed_2021-01-16.zip contains new Gerber files for the latest version of the MIB238.  The C11 capacitor has been removed and a larger ground plane connection was added.  NOTE: This design has not been tested.  Use at your own risk.
+The file mib238_v5_routed_2021-01-16.zip contains new Gerber files for the latest version of the MIB238.  The C11 capacitor has been removed and a larger ground plane connection was added.
+
+The file mib238_v7_wifi_routed_2021-07-27.zip contains new Gerber files for a new version of the MIB238 with integrated WiFi.  It uses a Wemos D1 Mini ESP8266 Wifi board programmed with Zimodem firmware (https://github.com/bozimmerman/Zimodem) and one of the MAX238 ICs is replaced with 2 CD74HC4050E ICs for logic level conversion.  NOTE: This design has not been fully tested.  Use at your own risk.
