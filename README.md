@@ -10,4 +10,4 @@ The file Multipurpose Interface Board 238.pdf is the documentation for the MIB23
 
 The file mib238_v5_routed_2021-01-16.zip contains new Gerber files for the latest version of the MIB238.  The C11 capacitor has been removed and a larger ground plane connection was added.
 
-The file mib238_v7_wifi_routed_vrestrict_2021-08-26.zip contains new Gerber files for a new version of the MIB238 with integrated WiFi.  It uses a Wemos D1 Mini ESP8266 Wifi board programmed with Zimodem firmware (https://github.com/bozimmerman/Zimodem) and one of the MAX238 ICs is replaced with 2 CD74HC4050E ICs for logic level conversion.  NOTE: This design has not been fully tested.  Use at your own risk.
+The file mib238_v7_wifi_routed_vrestrict_2021-08-26.zip contains new Gerber files for a new version of the MIB238 with integrated WiFi.  It uses a Wemos D1 Mini ESP8266 Wifi board programmed with Zimodem firmware (https://github.com/bozimmerman/Zimodem) and one of the MAX238 ICs is replaced with 2 CD74HC4050E ICs for logic level conversion.  Use at your own risk.
