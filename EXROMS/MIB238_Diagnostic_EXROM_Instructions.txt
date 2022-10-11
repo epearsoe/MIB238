@@ -1,0 +1,98 @@
+MIB238_diagnostic_v3_27128.bin
+
+I created a new Diagnostic utility for the ADAM. I think most diagnostic utilities currently avaiable are useless if you have an ADAM with bad RAM or bad VRAM since most require both to run (DSK, DDP or Cartridge based). The Diagnostic I created runs from an eprom that is inserted into the MIB238 expansion ROM socket. The utility will run if RAM or VRAM is damaged. It will even run with a missing RAM chip.
+
+The Diagnostic requires the following components to be operational:
+
+Z80
+Clock
+SmartWRITER ROM
+Sound Chip
+(Probably miscellaneous logic chips)
+
+NOTE: 
+	-	Remove any game cartridges from the ADAM computer.
+	-	Jumper configuration J1 for all MIB238 cards is 3-4 and 9-10 for 27128 (16k) E/PROMs
+
+When the ADAM is started with the Diagnostic eprom installed in the MIB238 the following sequence of checks occur:
+
+1. VRAM check 1 - VRAM is checked with a walking ones RAM check. If a particular VRAM chip is detected as faulty a buzzing beep will be heard. The number of buzzing beeps indicates the faulty chip according to this table:
+
+VRAM IC	BIT	BUZZING BEEPS
+U11	BIT 0	1
+U13	BIT 1	2
+U15	BIT 2	3
+U17	BIT 3	4
+U10	BIT 4	5
+U12	BIT 5	6
+U14	BIT 6	7
+U16	BIT 7	8
+
+NOTE: The check detects the first failed chip. The diagnostic should be run again after the failed chip is replaced to determine if there are other bad VRAM chips.
+
+2. VRAM check 2 - VRAM is checked with a 55AA test. If a particular VRAM chip is detected as faulty a buzzing beep will be heard. The number of buzzing beeps indicates the faulty chip according to this table:
+
+VRAM IC	BIT	BUZZING BEEPS
+U11	BIT 0	1
+U13	BIT 1	2
+U15	BIT 2	3
+U17	BIT 3	4
+U10	BIT 4	5
+U12	BIT 5	6
+U14	BIT 6	7
+U16	BIT 7	8
+
+NOTE: The check detects the first failed chip. The diagnostic should be run again after the failed chip is replaced to determine if there are other bad VRAM chips.
+
+3. Upper ADAM 32K RAM check - Upper ADAM 32K RAM is checked with a 55AA test. If a particular RAM chip is detected as faulty a tink beep will be heard. The number of tink beeps indicates the faulty chip according to this table:
+
+RAM IC	BIT	TINK BEEPS
+U11	BIT 0	1
+U12	BIT 1	2
+U13	BIT 2	3
+U14	BIT 3	4
+U15	BIT 4	5
+U16	BIT 5	6
+U17	BIT 6	7
+U18	BIT 7	8
+
+NOTE: The check detects the first failed chip. The diagnostic should be run again after the failed chip is replaced to determine if there are other bad RAM chips.
+
+4. OS7 ROM check - The checksum of the OS7 rom is checked to determine if it is valid. The utility can identify the following OS7 variants:
+
+	OS7 original (D483)
+	OS7 No Delay (D335)
+	OS7 Short Delay (D471)
+	OS7 Alternative Font (6E5E)
+
+If a problem is detected with the OS7 ROM the screen border will change to red.
+
+5. Lower ADAM 32K RAM check - Lower ADAM 32K RAM is checked with a 55AA test. If a particular RAM chip is detected as faulty a tink beep will be heard. The number of tink beeps indicates the faulty chip according to this table:
+
+RAM IC	BIT	TINK BEEPS
+U11	BIT 0	1
+U12	BIT 1	2
+U13	BIT 2	3
+U14	BIT 3	4
+U15	BIT 4	5
+U16	BIT 5	6
+U17	BIT 6	7
+U18	BIT 7	8
+
+NOTE: The check detects the first failed chip. The diagnostic should be run again after the failed chip is replaced to determine if there are other bad RAM chips.
+
+6. EOS ROM check - performs a checksum test on the EOS ROM.
+
+7. ADAMNet Test - checks communication with ADAMNet device (keyboard), performs an ADAMNet reset and attempts to synchronize the Z80 and master 6801 clocks.
+
+8. Loads EOS - Loads EOS in to high RAM and initializes.
+
+9. User is prompted to hit any key to continue. Diagnostic will continue on in 10 seconds if not key is pressed.
+
+10. Scan ADAMNet - Scans ADAMNet for connected devices and reports findings.
+
+11. User is prompted to hit any key to continue. Diagnostic will continue on in 10 seconds if not key is pressed.
+
+12. Keyboard Test - Prompts the user for a keyboard test if the user hit a key at STEP 10 otherwise goes directly in to keyboard test.
+
+13. Controller Test - Prompts the user for a test of Controller 1 and 2. Can also test Super Action Controller button 3 and 4.
